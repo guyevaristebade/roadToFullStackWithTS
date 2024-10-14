@@ -1,0 +1,26 @@
+.container{
+
+    .product-container{
+        margin: 4rem 0;
+
+        h1{
+            color: #fff;
+            margin: 1rem 0;
+        }
+
+        form{
+            display: flex;
+            gap: 2rem;
+
+            input{
+                padding: 1rem .2rem;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+
+            button{
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    // position: fixed;
+    // z-index: 100;
+    // background-color: #18181B;
+    // right: 0;
+    // left: 0;
+    // top: 0;
+
+    h1{
+        color: #fff;
+        font-size: 2rem;
+
+
+        &::after{
+            content: ".";
+            color: rgb(103,106,238);
+            margin-left: .2rem;
+        }
+    }
+}
+

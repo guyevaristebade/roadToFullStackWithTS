@@ -1,0 +1,19 @@
+.box{
+    background-color: #323232;
+    border-radius : 8px;
+    transition: .5s ease-in-out border;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover{
+        border: 1px solid #fff;
+    }
+
+    a{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+}

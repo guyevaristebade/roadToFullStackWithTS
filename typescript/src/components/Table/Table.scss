@@ -1,0 +1,56 @@
+table{
+    border-collapse: collapse;
+    cursor: pointer;
+    width: 100%;
+    background-color: #323232;
+    border: 2px solid rgb(103,106,238);
+
+    thead {
+
+        tr{
+            background-color: rgb(103,106,238);
+            text-align: center;
+        }
+
+        th,td{
+            padding: 1.5rem 2rem;
+            color: #fff;
+            border : 1px solid #ccc;
+
+        }
+    }
+
+    tbody{
+        tr,th,td {
+            border: #ccc solid 1px;
+            color: #fff;;
+        }
+
+        tr{
+            &:last-of-type{
+                border-bottom: rgb(103,106,238) 2px solid;
+                color: #fff;
+            }
+        }
+
+        td{
+            padding: 1.5rem 2rem;
+            color: #fff;;
+        }
+    }
+
+}
+
+
+.pagination {
+    margin-top: 10px;
+    button {
+        margin: 0 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
