@@ -26,22 +26,27 @@ Create Blog Post
 Create a new blog post using the POST method
 
 POST /posts
+```json
 {
   "title": "My First Blog Post",
   "content": "This is the content of my first blog post.",
   "category": "Technology",
   "tags": ["Tech", "Programming"]
 }
+```
 Each blog post should have the following fields:
 
+```json
 {
   "title": "My First Blog Post",
   "content": "This is the content of my first blog post.",
   "category": "Technology",
   "tags": ["Tech", "Programming"]
 }
+``` 
 The endpoint should validate the request body and return a 201 Created status code with the newly created blog post i.e.
 
+```json
 {
   "id": 1,
   "title": "My First Blog Post",
@@ -51,6 +56,7 @@ The endpoint should validate the request body and return a 201 Created status co
   "createdAt": "2021-09-01T12:00:00Z",
   "updatedAt": "2021-09-01T12:00:00Z"
 }
+```
 or a 400 Bad Request status code with error messages in case of validation errors.
 
 Update Blog Post
@@ -58,14 +64,17 @@ Update Blog Post
 Update an existing blog post using the PUT method
 
 PUT /posts/1
+```json
 {
   "title": "My Updated Blog Post",
   "content": "This is the updated content of my first blog post.",
   "category": "Technology",
   "tags": ["Tech", "Programming"]
 }
+```
 The endpoint should validate the request body and return a 200 OK status code with the updated blog post i.e.
 
+```json
 {
   "id": 1,
   "title": "My Updated Blog Post",
@@ -75,6 +84,7 @@ The endpoint should validate the request body and return a 200 OK status code wi
   "createdAt": "2021-09-01T12:00:00Z",
   "updatedAt": "2021-09-01T12:30:00Z"
 }
+```
 or a 400 Bad Request status code with error messages in case of validation errors. It should return a 404 Not Found status code if the blog post was not found.
 
 Delete Blog Post
@@ -89,6 +99,7 @@ Get a single blog post using the GET method
 GET /posts/1
 The endpoint should return a 200 OK status code with the blog post i.e.
 
+```json
 {
   "id": 1,
   "title": "My First Blog Post",
@@ -98,6 +109,7 @@ The endpoint should return a 200 OK status code with the blog post i.e.
   "createdAt": "2021-09-01T12:00:00Z",
   "updatedAt": "2021-09-01T12:00:00Z"
 }
+```
 or a 404 Not Found status code if the blog post was not found.
 
 Get All Blog Posts
@@ -105,7 +117,7 @@ Get all blog posts using the GET method
 
 GET /posts
 The endpoint should return a 200 OK status code with an array of blog posts i.e.
-
+```json
 [
   {
     "id": 1,
@@ -126,6 +138,7 @@ The endpoint should return a 200 OK status code with an array of blog posts i.e.
     "updatedAt": "2021-09-01T12:30:00Z"
   }
 ]
+```
 You don’t have to implement pagination, authentication or authorization for this project. You can focus on the core functionality of the API.
 
 While retrieving posts, user can also filter posts by a search term. You should do a wildcard search on the title, content or category fields of the blog posts. For example:
